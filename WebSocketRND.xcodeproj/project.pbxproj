@@ -37,6 +37,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AD3C82E92C3818B6007F2740 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				AD6BB68B2C36CFC100930EBF /* AppDelegate.swift */,
+				AD6BB68D2C36CFC100930EBF /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		AD3C82EA2C3818BB007F2740 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AD6BB6962C36CFC300930EBF /* LaunchScreen.storyboard */,
+				AD6BB6912C36CFC100930EBF /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		AD3C82EB2C3818C2007F2740 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				AD6BB68F2C36CFC100930EBF /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		AD3C82EC2C3818D9007F2740 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 		AD6BB67F2C36CFC100930EBF = {
 			isa = PBXGroup;
 			children = (
@@ -56,12 +89,11 @@
 		AD6BB68A2C36CFC100930EBF /* WebSocketRND */ = {
 			isa = PBXGroup;
 			children = (
-				AD6BB68B2C36CFC100930EBF /* AppDelegate.swift */,
-				AD6BB68D2C36CFC100930EBF /* SceneDelegate.swift */,
-				AD6BB68F2C36CFC100930EBF /* ViewController.swift */,
-				AD6BB6912C36CFC100930EBF /* Main.storyboard */,
+				AD3C82EC2C3818D9007F2740 /* Managers */,
+				AD3C82EB2C3818C2007F2740 /* Controllers */,
+				AD3C82EA2C3818BB007F2740 /* Views */,
+				AD3C82E92C3818B6007F2740 /* App */,
 				AD6BB6942C36CFC300930EBF /* Assets.xcassets */,
-				AD6BB6962C36CFC300930EBF /* LaunchScreen.storyboard */,
 				AD6BB6992C36CFC300930EBF /* Info.plist */,
 			);
 			path = WebSocketRND;
