@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AD3C82EE2C38191F007F2740 /* WebSocketClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3C82ED2C38191F007F2740 /* WebSocketClient.swift */; };
 		AD6BB68C2C36CFC100930EBF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6BB68B2C36CFC100930EBF /* AppDelegate.swift */; };
 		AD6BB68E2C36CFC100930EBF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6BB68D2C36CFC100930EBF /* SceneDelegate.swift */; };
 		AD6BB6902C36CFC100930EBF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6BB68F2C36CFC100930EBF /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AD3C82ED2C38191F007F2740 /* WebSocketClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketClient.swift; sourceTree = "<group>"; };
 		AD6BB6882C36CFC100930EBF /* WebSocketRND.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WebSocketRND.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD6BB68B2C36CFC100930EBF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD6BB68D2C36CFC100930EBF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 		AD3C82EC2C3818D9007F2740 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				AD3C82ED2C38191F007F2740 /* WebSocketClient.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -172,6 +175,7 @@
 			files = (
 				AD6BB6902C36CFC100930EBF /* ViewController.swift in Sources */,
 				AD6BB68C2C36CFC100930EBF /* AppDelegate.swift in Sources */,
+				AD3C82EE2C38191F007F2740 /* WebSocketClient.swift in Sources */,
 				AD6BB68E2C36CFC100930EBF /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
