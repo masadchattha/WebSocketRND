@@ -92,14 +92,22 @@
 		AD6BB68A2C36CFC100930EBF /* WebSocketRND */ = {
 			isa = PBXGroup;
 			children = (
-				AD3C82EC2C3818D9007F2740 /* Managers */,
+				AD3C82E92C3818B6007F2740 /* App */,
 				AD3C82EB2C3818C2007F2740 /* Controllers */,
 				AD3C82EA2C3818BB007F2740 /* Views */,
-				AD3C82E92C3818B6007F2740 /* App */,
+				AD3C82EC2C3818D9007F2740 /* Managers */,
+				ADDBFFF62C3BD04A005D7481 /* Reuseables */,
 				AD6BB6942C36CFC300930EBF /* Assets.xcassets */,
 				AD6BB6992C36CFC300930EBF /* Info.plist */,
 			);
 			path = WebSocketRND;
+			sourceTree = "<group>";
+		};
+		ADDBFFF62C3BD04A005D7481 /* Reuseables */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Reuseables;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

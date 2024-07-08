@@ -5,6 +5,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -17,23 +18,56 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gkX-oh-oSF">
-                                <rect key="frame" x="128" y="405" width="137" height="43"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Send Message"/>
-                                <connections>
-                                    <action selector="sendMessage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="z0C-Ce-gIu"/>
-                                </connections>
-                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="tTP-My-yFT">
+                                <rect key="frame" x="0.0" y="59" width="393" height="708.66666666666663"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oSJ-Kt-RMt" userLabel="Message View">
+                                <rect key="frame" x="0.0" y="775.66666666666663" width="393" height="42.333333333333371"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="T1M-0A-8Vu">
+                                        <rect key="frame" x="16" y="0.0" width="361" height="42.333333333333336"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Send a message..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hS5-Tm-Aiq">
+                                                <rect key="frame" x="0.0" y="0.0" width="289.66666666666669" height="42.333333333333336"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2E8-2f-dmJ">
+                                                <rect key="frame" x="297.66666666666669" y="0.0" width="63.333333333333314" height="42.333333333333336"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Send"/>
+                                                <connections>
+                                                    <action selector="sendMessage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nlY-Sn-4UG"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="T1M-0A-8Vu" firstAttribute="centerX" secondItem="oSJ-Kt-RMt" secondAttribute="centerX" id="Nmt-uh-HJr"/>
+                                    <constraint firstItem="T1M-0A-8Vu" firstAttribute="centerY" secondItem="oSJ-Kt-RMt" secondAttribute="centerY" id="Pl0-eg-wgd"/>
+                                    <constraint firstItem="T1M-0A-8Vu" firstAttribute="leading" secondItem="oSJ-Kt-RMt" secondAttribute="leading" constant="16" id="fl8-so-mTi"/>
+                                    <constraint firstItem="T1M-0A-8Vu" firstAttribute="top" secondItem="oSJ-Kt-RMt" secondAttribute="top" id="grM-iA-6pH"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="oSJ-Kt-RMt" secondAttribute="bottom" id="9u4-R8-nIK"/>
+                            <constraint firstItem="tTP-My-yFT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Axf-Wf-swO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tTP-My-yFT" secondAttribute="trailing" id="Hx9-nl-Ep5"/>
+                            <constraint firstItem="oSJ-Kt-RMt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="d5g-f9-aHx"/>
+                            <constraint firstItem="oSJ-Kt-RMt" firstAttribute="top" secondItem="tTP-My-yFT" secondAttribute="bottom" constant="8" symbolic="YES" id="doe-10-2nO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oSJ-Kt-RMt" secondAttribute="trailing" id="laB-RW-qMQ"/>
+                            <constraint firstItem="tTP-My-yFT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="vbw-T1-xyJ"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="71" y="4"/>
+            <point key="canvasLocation" x="70.992366412213741" y="3.5211267605633805"/>
         </scene>
     </scenes>
     <resources>
