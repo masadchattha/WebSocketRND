@@ -7,8 +7,17 @@
 
 import Foundation
 
+// MARK: - WebSocketClientDelegate
+
+protocol WebSocketClientDelegate: AnyObject {
+    func didReceiveMessage(_ message: String, isSender: Bool)
+}
+
+// MARK: - WebSocketClient
+
 class WebSocketClient {
     private var webSocketTask: URLSessionWebSocketTask?
+    weak var delegate: WebSocketClientDelegate?
  
     init(url: URL) {
         let urlSession = URLSession(configuration: .default)
@@ -36,8 +45,12 @@ class WebSocketClient {
                 switch message {
                 case .string(let text):
                     print("Received string: \(text)")
+                    self?.delegate?.didReceiveMessage(text, isSender: false)
                 case .data(let data):
-                    print("Received data: \(String(data: data, encoding: .utf8) ?? "Unable to decode message...")")
+                    let text = String(data: data, encoding: .utf8) ?? "Unable to decode message..."
+                    self?.delegate?.didReceiveMessage(text, isSender: false)
+                    print("Received data: \(text)")
+                    
                 @unknown default:
                     fatalError()
                 }
@@ -50,15 +63,5 @@ class WebSocketClient {
 
     func disconnect() {
         webSocketTask?.cancel(with: .goingAway, reason: nil)
-    }
-
-    @discardableResult func returningFunc() -> Int  {
-        print("Number: 1")
-        print(1, 2, 3, 3)
-        return 1
-    }
-
-    func callingMethod() {
-        returningFunc()
     }
 }

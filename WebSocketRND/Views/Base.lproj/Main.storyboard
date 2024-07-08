@@ -21,6 +21,10 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="tTP-My-yFT">
                                 <rect key="frame" x="0.0" y="59" width="393" height="708.66666666666663"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="kPr-7S-DoM"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="eBz-GE-2KE"/>
+                                </connections>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oSJ-Kt-RMt" userLabel="Message View">
                                 <rect key="frame" x="0.0" y="775.66666666666663" width="393" height="42.333333333333371"/>
@@ -64,6 +68,10 @@
                             <constraint firstItem="tTP-My-yFT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="vbw-T1-xyJ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="messageTextField" destination="hS5-Tm-Aiq" id="eF2-C2-C1Z"/>
+                        <outlet property="tableView" destination="tTP-My-yFT" id="Rkh-by-Ur8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

@@ -10,6 +10,7 @@
 		AD3C82EE2C38191F007F2740 /* WebSocketClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3C82ED2C38191F007F2740 /* WebSocketClient.swift */; };
 		AD46E6D92C3BD4F000CE78FA /* UIVIewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD46E6D82C3BD4F000CE78FA /* UIVIewExtensions.swift */; };
 		AD46E6DF2C3BD6BC00CE78FA /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = AD46E6DE2C3BD6BC00CE78FA /* SnapKit */; };
+		AD46E6E32C3C138C00CE78FA /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD46E6E22C3C138C00CE78FA /* MessageCell.swift */; };
 		AD6BB68C2C36CFC100930EBF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6BB68B2C36CFC100930EBF /* AppDelegate.swift */; };
 		AD6BB68E2C36CFC100930EBF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6BB68D2C36CFC100930EBF /* SceneDelegate.swift */; };
 		AD6BB6902C36CFC100930EBF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6BB68F2C36CFC100930EBF /* ViewController.swift */; };
@@ -34,6 +35,7 @@
 /* Begin PBXFileReference section */
 		AD3C82ED2C38191F007F2740 /* WebSocketClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketClient.swift; sourceTree = "<group>"; };
 		AD46E6D82C3BD4F000CE78FA /* UIVIewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIVIewExtensions.swift; sourceTree = "<group>"; };
+		AD46E6E22C3C138C00CE78FA /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
 		AD6BB6882C36CFC100930EBF /* WebSocketRND.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WebSocketRND.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD6BB68B2C36CFC100930EBF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD6BB68D2C36CFC100930EBF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 		ADDBFFF62C3BD04A005D7481 /* Reuseables */ = {
 			isa = PBXGroup;
 			children = (
+				AD46E6E22C3C138C00CE78FA /* MessageCell.swift */,
 			);
 			path = Reuseables;
 			sourceTree = "<group>";
@@ -227,6 +230,7 @@
 				AD46E6D92C3BD4F000CE78FA /* UIVIewExtensions.swift in Sources */,
 				AD3C82EE2C38191F007F2740 /* WebSocketClient.swift in Sources */,
 				AD6BB68E2C36CFC100930EBF /* SceneDelegate.swift in Sources */,
+				AD46E6E32C3C138C00CE78FA /* MessageCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
