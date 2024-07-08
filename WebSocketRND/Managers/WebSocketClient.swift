@@ -9,7 +9,7 @@ import Foundation
 
 class WebSocketClient {
     private var webSocketTask: URLSessionWebSocketTask?
-
+ 
     init(url: URL) {
         let urlSession = URLSession(configuration: .default)
         webSocketTask = urlSession.webSocketTask(with: url)
@@ -37,7 +37,7 @@ class WebSocketClient {
                 case .string(let text):
                     print("Received string: \(text)")
                 case .data(let data):
-                    print("Received data: \(data)")
+                    print("Received data: \(String(data: data, encoding: .utf8) ?? "Unable to decode message...")")
                 @unknown default:
                     fatalError()
                 }

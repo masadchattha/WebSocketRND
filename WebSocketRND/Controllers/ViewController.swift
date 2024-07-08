@@ -9,7 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    let webSocketClient = WebSocketClient(url: URL(string: "wss://echo.websocket.org")!)
+    let webSocketClient = WebSocketClient(url: URL(string: "ws://localhost:8080")!)
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func sendMessage(_ sender: UIButton) {
-        webSocketClient.sendMessage("Hello, WebSocket!")
+        webSocketClient.sendMessage("Hello, I'm iOS app!")
     }
 }
 
